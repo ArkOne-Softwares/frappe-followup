@@ -166,6 +166,12 @@ app_license = "agpl-3.0"
 # 	],
 # }
 
+scheduler_events = {
+    "all": [
+        "followup.follow_up.doctype.follow_up.follow_up.check_due_reminders"
+    ]
+}
+
 # Testing
 # -------
 
@@ -238,7 +244,6 @@ app_license = "agpl-3.0"
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True
 
-# default_log_clearing_doctypes = {
-# 	"Logging DocType Name": 30  # days to retain logs
-# }
-
+default_log_clearing_doctypes = {
+    "Logging DocType Name": 1  # days to retain logs
+}

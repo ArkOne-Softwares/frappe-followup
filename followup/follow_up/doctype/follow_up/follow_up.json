@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-09-16 19:24:47.099698",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "user",
+  "status",
+  "by",
+  "color",
+  "document_type",
+  "related_name",
+  "notified"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Follow Up Date & Time",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Follow Up By",
+   "options": "User"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "default": "Call / Phone",
+   "fieldname": "by",
+   "fieldtype": "Select",
+   "label": "Connect By",
+   "options": "Call / Phone\nEmail\nSMS\nWhatsApp\nSocial Media"
+  },
+  {
+   "default": "#5292f7",
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "DocType",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "related_name",
+   "fieldtype": "Data",
+   "label": "Related DocType Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "notified",
+   "fieldtype": "Check",
+   "label": "Notified",
+   "no_copy": 1
+  }
+ ],
+ "is_calendar_and_gantt": 1,
+ "links": [
+  {
+   "link_doctype": "Calendar View",
+   "link_fieldname": "name"
+  }
+ ],
+ "modified": "2024-09-17 00:20:17.622323",
+ "modified_by": "Administrator",
+ "module": "Follow Up",
+ "name": "Follow Up",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "High"
+  }
+ ]
+}
